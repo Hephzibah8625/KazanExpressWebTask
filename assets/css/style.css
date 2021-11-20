@@ -102,7 +102,7 @@ hr {
   height: 620px;
   max-width: 1920px;
   margin: 100px auto;
-  background-image: url("/assets/img/line.png"), url("/assets/img/fill-line.png");
+  background-image: url("https://hephzibah8625.github.io/KazanExpressWebTask/assets/img/line.png"), url("https://hephzibah8625.github.io/KazanExpressWebTask/assets/img/fill-line.png");
   background-repeat: no-repeat;
   background-position: center top;
   overflow: hidden;
