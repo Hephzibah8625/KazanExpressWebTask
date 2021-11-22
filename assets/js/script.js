@@ -1,12 +1,22 @@
-document.querySelectorAll('.faq_item').forEach((item) =>
-    item.addEventListener('click', () => {
-        if (item.classList.contains('_clicked')) {
-            item.classList.remove('_clicked');
-            document.querySelector('#' + item.id + '_img').src = '/assets/img/open.png';
+
+let acc = document.getElementsByClassName("faq_item");
+
+for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener('click', function () {
+        this.classList.toggle("_active");
+        let content = this.children[1];
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
         }
         else {
-            item.classList.add('_clicked');
-            document.querySelector('#' + item.id + '_img').src = '/assets/img/close.png';
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+
+        if (this.classList.contains('_active')) {
+            document.querySelector('#' + this.id + '_img').src = 'assets/img/close.png';
+        }
+        else {
+            document.querySelector('#' + this.id + '_img').src = 'assets/img/open.png';
         }
     })
-)
+}
